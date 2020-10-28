@@ -6,7 +6,7 @@ from telethon.tl.types import DocumentAttributeFilename, DocumentAttributeVideo,
 import traceback
 import typing
 
-import libtorrent as lt
+import libtorrent
 from session import SessionManager
 import asyncio
 import re
