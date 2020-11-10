@@ -17,6 +17,7 @@ COPY start.sh .
 COPY --from=0 /root/boost_1_64_0/bin.v2/libs/python/build/gcc-7/release/asserts-production/i2p-off/libtorrent-link-static/libtorrent-python-pic-on/lt-visibility-hidden/libboost_python3.so.1.64.0  .
 COPY --from=0 /root/libtorrent/bindings/python/bin/gcc-7/release/asserts-production/i2p-off/libtorrent-link-static/libtorrent-python-pic-on/lt-visibility-hidden/libtorrent.so .
 
+RUN apt-get install libtorrent-rasterbar8 python-libtorrent
 RUN pip3 install -r requirements.txt && chmod +x ./start.sh && chmod +x main.py
 
 CMD ["./start.sh"]
